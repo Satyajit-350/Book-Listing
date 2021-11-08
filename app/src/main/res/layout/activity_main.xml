@@ -16,16 +16,16 @@
 
         <EditText
             android:id="@+id/search_option"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Search"
+            android:hint="@string/search"
             android:inputType="textMultiLine"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
         <Button
             android:id="@+id/search_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="search"/>
+            android:text="@string/search_button"/>
 
     </LinearLayout>
 

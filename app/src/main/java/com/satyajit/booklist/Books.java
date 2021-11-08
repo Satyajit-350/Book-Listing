@@ -2,15 +2,15 @@ package com.satyajit.booklist;
 
 public class Books {
 
-    private String mBookName;
+    private final String mBookName;
 
-    private String mDescription;
+    private final String mDescription;
 
-    private String murl;
+    private final String murl;
 
-    private String mImage;
+    private final String mImage;
 
-    private String mAuthor;
+    private final String mAuthor;
 
     public Books(String bname, String description, String url, String img, String author){
          mBookName = bname;

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">BookList</string>
+    <string name="Book_title">Books Title</string>
+    <string name = "author">Author</string>
+    <string name = "description">Null</string>
+    <string name = "search">Search</string>
+    <string name = "search_button">SEARCH</string>
 </resources>
