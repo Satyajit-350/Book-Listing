@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class BooksAdapter extends ArrayAdapter<Books> {
@@ -31,7 +33,7 @@ public class BooksAdapter extends ArrayAdapter<Books> {
         desc.setText(currentBook.getmDescription());
 
         ImageView bookImage = (ImageView) listItemView.findViewById(R.id.image_viewa);
-
+        Glide.with(parent).load(currentBook.getmImage()).into(bookImage);
         TextView authorName = (TextView) listItemView.findViewById(R.id.author_view);
         authorName.setText(currentBook.getmAuthor());
 
