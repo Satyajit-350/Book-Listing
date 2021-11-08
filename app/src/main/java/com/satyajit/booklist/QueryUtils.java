@@ -103,12 +103,12 @@ public class QueryUtils {
                 String bookName = info.getString("title");
                 String description = info.optString("description");
                 JSONObject image = info.getJSONObject("imageLinks");
-                String imageLink = image.getString("smallThumbnail");
+                String imagelink = image.getString("thumbnail");
                 JSONArray author = info.getJSONArray("authors");
                 String authorName = author.optString(0);
                 String url = info.getString("previewLink");
 
-                Books name = new Books(bookName,description,url,imageLink,authorName);
+                Books name = new Books(bookName,description,url,imagelink,authorName);
                 books.add(name);
             }
         }catch(JSONException e){
