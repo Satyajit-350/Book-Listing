@@ -33,7 +33,7 @@ public class BooksAdapter extends ArrayAdapter<Books> {
         desc.setText(currentBook.getmDescription());
 
         ImageView bookImage = (ImageView) listItemView.findViewById(R.id.image_views);
-        Glide.with(parent).load(currentBook.getmImage()).into(bookImage);
+        Glide.with(parent.getContext()).load(currentBook.getmImage()).into(bookImage);
         TextView authorName = (TextView) listItemView.findViewById(R.id.author_view);
         authorName.setText(currentBook.getmAuthor());
 
