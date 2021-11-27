@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                View loadingIndicator = findViewById(R.id.loading_indicator);
+                loadingIndicator.setVisibility(View.VISIBLE);
                 EditText searchBook = (EditText) findViewById(R.id.search_option);
                 String message = searchBook.getText().toString();
                 final String SAMPLE_JSON_RESPONSE = "https://www.googleapis.com/books/v1/volumes?q="+message+"&maxResults=20";
@@ -69,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(List<Books> data) {
+            View loadingIndicator = findViewById(R.id.loading_indicator);
+            loadingIndicator.setVisibility(View.GONE);
             // Clear the adapter of previous earthquake data
             itemsAdapter.clear();
 

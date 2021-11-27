@@ -24,6 +24,12 @@ public class QueryUtils {
     public static final String LOG_TAG = QueryUtils.class.getSimpleName();
 
     public static List<Books> fetchEarthquakeData(String requestUrl){
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         // Create URL object
         URL url = createUrl(requestUrl);
         String jsonResponse = null;
